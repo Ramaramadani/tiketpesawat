@@ -5,9 +5,18 @@ use App\Http\Controllers\ListBarangController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RamaController;
 
+Route::get('/login', function () {
+    return view('login');
+})->name('login');  // Mendefinisikan nama route sebagai 'login'
+
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/promo', function () {
+    return view('promo');
+})->name('promo');
+
 
 Route::get('/product', function () {
     return view('product');
