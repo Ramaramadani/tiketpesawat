@@ -4,6 +4,15 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListBarangController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RamaController;
+use App\Http\Controllers\ProductController;
+
+Route::get('/praktikum7Rama', function () {
+    return view('pages.home');
+});
+
+
+Route::get('/produk', [ProductController::class, 'show']);
+
 
 Route::get('/login', function () {
     return view('login');
